@@ -10,10 +10,11 @@ const port = process.env.MONGO_PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/api/curso', modulos);
-app.use('/', express.static('public'));
+app.use('/', modulos);
+// app.use('/', express.static('public'));
 
-const MONGO_DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/dbcurso?authSource=admin';
+const MONGO_DB_URL = 'mongodb://mongo:LPkQHNZeWCfCBYTzCIshPlwEduUwTuCp@monorail.proxy.rlwy.net:42171/dbcurso?authSource=admin';
+// const MONGO_DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/dbcurso?authSource=admin';
 
 mongoose.connect(MONGO_DB_URL);
 
