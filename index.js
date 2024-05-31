@@ -13,9 +13,7 @@ app.use(cors());
 app.use('/', modulos);
 // app.use('/', express.static('public'));
 
-app.get('/ping', (req, res) => {
-    res.json({ ping: 'pong' })
-})
+
 
 const MONGO_DB_URL = 'mongodb://mongo:LPkQHNZeWCfCBYTzCIshPlwEduUwTuCp@monorail.proxy.rlwy.net:42171/dbcurso?authSource=admin';
 // const MONGO_DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/dbcurso?authSource=admin';

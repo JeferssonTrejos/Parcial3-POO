@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Modulo = require('../models/model'); 
 
+router.get('/ping', (req, res) => {
+    res.json({ ping: 'pong' })
+})
+
 router.get('/', async (req, res) => {
     try {
         const modulos = await Modulo.find();
