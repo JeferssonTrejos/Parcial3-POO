@@ -13,9 +13,10 @@ app.use(cors());
 app.use('/', modulos);
 // app.use('/', express.static('public'));
 
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://mongo:LPkQHNZeWCfCBYTzCIshPlwEduUwTuCp@monorail.proxy.rlwy.net:42171/';
+const DB_NAME = process.env.DB_NAME || 'dbcurso';
 
-
-const MONGO_DB_URL = 'mongodb://mongo:LPkQHNZeWCfCBYTzCIshPlwEduUwTuCp@monorail.proxy.rlwy.net:42171/dbcurso?authSource=admin';
+const MONGO_DB_URL = MONGO_URL + DB_NAME + '?authSource=admin';
 // const MONGO_DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/dbcurso?authSource=admin';
 
 mongoose.connect(MONGO_DB_URL);
