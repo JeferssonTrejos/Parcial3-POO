@@ -13,7 +13,7 @@ app.use(cors());
 app.use('/', modulos);
 // app.use('/', express.static('public'));
 
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://mongo:LPkQHNZeWCfCBYTzCIshPlwEduUwTuCp@monorail.proxy.rlwy.net:42171/';
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/';
 const DB_NAME = process.env.DB_NAME || 'dbcurso';
 
 const MONGO_DB_URL = MONGO_URL + DB_NAME + '?authSource=admin';
